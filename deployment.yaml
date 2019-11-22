@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: kubernetes-test-yf93-application
-        image: yf93acrtest.azurecr.io/balajivirupaksham/flask-crud-rest-app:5
+        image: yf93acrtest.azurecr.io/balajivirupaksham/flask-crud-rest-app:6
         ports:
           - containerPort: 5000
