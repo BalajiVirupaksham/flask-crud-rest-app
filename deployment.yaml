@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yf93-kubernetes-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flas-yf93-kubernetes-deployment
+  template:
+    metadata:
+      labels:
+        app: flas-yf93-kubernetes-deployment
+    spec:
+      containers:
+      - name: kubernetes-test-yf93-application
+        image: yf93acrtest.azurecr.io/balajivirupaksham/flask-crud-rest-app:5
+        ports:
+          - containerPort: 5000
